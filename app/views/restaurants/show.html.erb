@@ -1,0 +1,8 @@
+<div class="jumbotron mt-2 m-5 text-align-center">
+  <h1 class="display-4"> <%= @restaurant.name %> </h1>
+  <img class="card-img-top" src="https://source.unsplash.com/random" alt="Card image cap" style="height: 300px; width: 300px; overflow: hidden;">
+  <p class="lead"> <%= @restaurant.category %><p>
+  <hr class="my-4">
+  <p class="lead"> <%= @restaurant.address %></p>
+<%= link_to "Leave a review", new_restaurant_review_path(@restaurant), class: "btn btn-primary" %>
+</div>

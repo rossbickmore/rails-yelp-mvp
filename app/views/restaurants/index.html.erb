@@ -1,0 +1,14 @@
+<div class="d-flex flex-wrap justify-content-around mt-2" style="width: 100%;">
+<% @restaurants.each do |restaurant| %>
+  <div class="card p-2 bd-highlight p-2 m-3" style="width: 300px;">
+    <img class="card-img-top" src="https://source.unsplash.com/random" alt="Card image cap" style="height: 200px; width: auto; overflow: hidden;">
+    <div class="card-body">
+      <h5 class="card-title"><%= restaurant.name %></h5>
+      <p class="card-text"><%= restaurant.address %></p>
+      <p><%= restaurant.category %></p>
+      <a href="/restaurants/<%= restaurant.id %>" class="btn btn-primary">See more</a>
+    </div>
+  </div>
+<% end %>
+</div>
+
