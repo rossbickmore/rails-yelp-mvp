@@ -4,5 +4,15 @@
   <p class="lead"> <%= @restaurant.category %><p>
   <hr class="my-4">
   <p class="lead"> <%= @restaurant.address %></p>
-<%= link_to "Leave a review", new_restaurant_review_path(@restaurant), class: "btn btn-primary" %>
+  <%= link_to "Leave a review", new_restaurant_review_path(@restaurant), class: "btn btn-primary" %>
+  <% @reviews.each do|review| %>
+    <div class="card mt-5">
+      <div class="card-body">
+        <%= review.content %>
+      </div>
+      <div class="card-body">
+      <h1 class="display-4 text-align-center"><%= "*" * review.rating.to_i %></h1>
+      </div>
+    </div>
+  <% end %>
 </div>
